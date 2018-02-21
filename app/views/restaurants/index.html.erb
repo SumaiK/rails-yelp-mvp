@@ -1,0 +1,16 @@
+<div>
+<h1>Restaurants</h1>
+</div>
+<h5><%= link_to 'Create a new Restaurant Entry', new_restaurant_path %></h5>
+
+  <div class="container">
+    <ul>
+    <% @restaurants.each do |restaurant| %>
+      <li class="elem"><%= link_to restaurant.name, edit_restaurant_path(restaurant) %></li>
+      <li><%= restaurant.address %></li>
+      <li><%= restaurant.category %></li>
+      <%= link_to 'show', restaurant %></li>
+      <p>--------</p>
+    <% end %>
+    </ul>
+  </div>
